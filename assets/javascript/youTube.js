@@ -1,5 +1,5 @@
 $(".submit").on("click",function displayResults(event) {
-	var band = $("#userInput").val().trim() + " music ";
+	var band = $("#userInput").val().trim() + " music vevo song ";
 	$(".video-here").empty();
 
 console.log(band);
