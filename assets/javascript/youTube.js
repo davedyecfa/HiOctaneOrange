@@ -1,12 +1,12 @@
 $(".submit").on("click",function displayResults(event) {
-	var band = $("#userInput").val().trim() + " music vevo song ";
+	var band = $("#userInput").val().trim() + " music vevo ";
 	$(".video-here").empty();
 
 console.log(band);
 	event.preventDefault();
 	var search = $(this).attr("data-name");
 	var apiKey = "AIzaSyDR-djEPImqtWC8bsbIAjvBT2a_0BuC0AY";
-	var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+ band+ "&maxResults=1&key=" + apiKey;
+	var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+ band+ "&maxResults=1&type=video&key=" + apiKey;
 
     $.ajax({
     	url:queryURL,
