@@ -2,11 +2,11 @@ $("#search-button").on("click",function displayResults(event) {
 	var band = $("#keyword").val().trim();
 	$("#keyword").empty();
 
-console.log(band);
+console.log("the band" + band);
 	event.preventDefault();
 	var search = $(this).attr("data-keyword");
 	var apiKey = "a1ee39e4164009e54314b8a2ff9d7fd6";
-	var queryURL = "http://api.musixmatch.com/ws/1.1/track.search?q_artist=" + band + "&page_size=10&page=1&s_track_rating=desc";
+	var queryURL = "matcher.track.get?q_track=a%20te&q_artist=" + band + "&f_has_lyrics=1";
 
     $.ajax({
     	url:queryURL,
