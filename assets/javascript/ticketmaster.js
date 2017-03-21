@@ -57,14 +57,6 @@ $(document).ready(function(){
       }
       item.show();
       item.off("click");
-      item.click(events[i], function(eventObject) {
-        console.log(eventObject.data);
-        try {
-          getAttraction(eventObject.data._embedded.attractions[0].id);
-        } catch (err) {
-          console.log(err);
-        }
-      });
       item=item.next();
     }
   }
