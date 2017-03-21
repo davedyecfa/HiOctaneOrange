@@ -29,5 +29,5 @@ console.log(band);
 
 
     });
-})
+});
 

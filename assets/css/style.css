@@ -1,0 +1,13 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url("../images/background4.jpg");
+	width: 90%;
+}
+footer{
+	text-align: center;
+	margin-top:38rem;
+	color:#fff
+}
