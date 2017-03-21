@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
     <title>Concert Mob</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 </head>
-    <header>
-        <nav>
-                <div class="nav-wrapper card-panel  blue-grey">
-                    <div class="container">
-                        <a href="#" class="brand-logo">ConcertMob</a>
-                    </div>
 
 <body>
-
-            </div>
-        </nav>
-    </header>
-    </div>
     <main>
         <!--========================================Slide out Nav Bar=============================================-->
+
         <ul id="slide-out" class="side-nav">
             <li>
                 <div class="userView">
@@ -31,12 +25,13 @@
                     </div>
                 </div>
             </li>
+
             <div class="container">
                 <div class="row">
                     <div class="col s1 m10 offset-m1">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title black-text">The Details</span>
+                            <span class="card-title black-text search">The Details</span>
                                 <form>
                                     <div class="row">
                                         <div class="input-field col s12">
@@ -52,13 +47,13 @@
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input placeholder="Start Date" id="start-date" type="text" class="validate">
+                                            <input placeholder="Start Date" id="start-date" type="date" class="validate">
                                             <label for="date" class="active">Start Date</label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input placeholder="End Date" id="end-date" type="text" class="validate">
+                                            <input placeholder="End Date" id="end-date" type="date" class="validate">
                                             <label for="date" class="active">End Date</label>
                                         </div>
                                     </div>
@@ -70,71 +65,99 @@
                                     </div>
                                 </form>
                             </div>
+
                             <div class="card-action">
                                 <input type="submit" id="search-button" class="btn" value="Search">
                             </div>
                         </div>
                     </div>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="medium material-icons">search</i></a>
-        <!--=============================================================================================================-->
-        <!--===========================================LiveNation Response Table=========================================-->
-        <div class="row">
-            <div class="col m7" id="ticketMaster-here">
-                <table class="bordered striped container">
-                    <thead>
-                        <tr>
-                            <th data-field="event">Event</th>
-                            <th data-field="date">Date</th>
-                            <th data-field="price">Item Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                </div>
             </div>
-            <div class="col m3" id="youTube-Here"> YouTube Here</div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col m7"></div>
-            <div class="col m3" id="spotify-Here"> Spotify Here</div>
-        </div>
-        <div class="row">
-            <div class="col m7"></div>
-            <div class="col m3" id="musixMatch-Here"> musixMatch Here</div>
-        </div>
-        <!--============================================================================================================-->
-        <!--==========================================Footer=============================================================-->
-    </main>
-    <footer class="page-footer">
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">search</i></a>
+        <!--=============================================================================================================-->
+        <!--===========================================ticketmaster Response Table=========================================-->
+
         <div class="container">
             <div class="row">
-                <div class="col s12 m8 l6">
-                    <h5 class="white-text">iTunes</h5>
-                    <p class="grey-text text-lighten-4">What do we put here?</p>
+              <div class="col-xs-6">
+                <div id='events-panel' class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Events</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="events" class="list-group">
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading"></h4>
+                        <p class="list-group-item-text"></p>
+                        <p class="venue"></p>
+                        <p class="price"></p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading"></h4>
+                        <p class="list-group-item-text"></p>
+                        <p class="venue"></p>
+                        <p class="price"></p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading"></h4>
+                        <p class="list-group-item-text"></p>
+                        <p class="venue"></p>
+                        <p class="price"></p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading"></h4>
+                        <p class="list-group-item-text"></p>
+                        <p class="venue"></p>
+                        <p class="price"></p>
+                    </a>
                 </div>
             </div>
+            <div class="panel-footer">
+              <ul class="pager">
+                <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+                <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
         </div>
-        <div class="card-panel blue-grey">
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2017 Copyright HiOctaneOrange
-                </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+    <div class="col m7"></div>
+    <div class="col m3" id="musixMatch-Here"> youtube Here</div>
+</div>
+<div class="row">
+    <div class="col m7"></div>
+    <div class="col m3" id="spotify-Here"> Spotify Here</div>
+</div>
+<div class="row">
+    <div class="col m7"></div>
+    <div class="col m3" id="musixMatch-Here"> musixMatch Here</div>
+</div>
+</main>
+<!--============================================================================================================-->
+<!--==========================================Footer=============================================================-->
+<footer>
+    <div class="card-panel black">
+        <div class="footer-copyright">
+            <div>
+                © 2017 Copyright HiOctaneOrange
             </div>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script>
+    </div>
+</footer>
+
+<script>
     $('.carousel.carousel-slider').carousel({
         fullWidth: true
     });
-    </script>
-    <script src="assets/javascript/logic.js"></script>
-     <script src="assets/javascript/musixMatch.js"></script>
-     <script src="assets/javascript/spotify.js"></script>
-    <!--=====================================================================================================-->
-</body>
+</script>
 
+<script src="assets/javascript/logic.js"></script>
+<script src="assets/javascript/ticketmaster.js"></script>
+<!--=====================================================================================================-->
+</body>
 </html>
