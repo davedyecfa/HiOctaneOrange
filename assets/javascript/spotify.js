@@ -1,7 +1,20 @@
+ 
+ 
 
 
-  function getArtistTrack(artist) {
-    // Running an initial search to identify the artist's unique Spotify id
+
+
+
+
+ $("#select-artist").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    var artist = $("#artist-input").val().trim();
+    // Running the getArtistTrack (passing in the artist as an argument)
+    $("#spotify-Here").empty()
+
+     // Running an initial search to identify the artist's unique Spotify id
     var queryURL = "https://api.spotify.com/v1/search?q=" + artist + "&type=artist";
     $.ajax({
       url: queryURL,
@@ -27,15 +40,8 @@
           "' frameborder='0' allowtransparency='true'></iframe>";
         // Appending the new player into the HTML
         $("#spotify-Here").append(player);
+      
       });
     });
-  }
-  // Event handler for user clicking the select-artist button
-  $("#select-artist").on("click", function(event) {
-    // Preventing the button from trying to submit the form
-    event.preventDefault();
-    // Storing the artist name
-    var artist = $("#artist-input").val().trim();
-    // Running the getArtistTrack (passing in the artist as an argument)
-    getArtistTrack(artist);
-  });
+  })
+ 
