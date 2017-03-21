@@ -48,7 +48,7 @@ $(document).ready(function(){
       }
       item.children('.list-group-item-text').text(events[i].dates.start.localDate);
       if (events[i].priceRanges !== undefined){
-        $(".price").text("pirce" + events[i].priceRanges[0].min);
+        $(".price").text("price " + events[i].priceRanges[0].min);
       }
       try {
         item.children(".venue").text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
