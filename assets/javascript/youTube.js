@@ -1,5 +1,5 @@
-$(".submit").on("click",function displayResults(event) {
-	var band = $("#userInput").val().trim() + " music vevo ";
+$(".youtube").on("click",function displayResults(event) {
+	var band = $("data-artist") + " music vevo ";
 	$(".video-here").empty();
 
 console.log(band);
