@@ -49,6 +49,7 @@ $(document).ready(function(){
       if (events[i]._embedded.attractions !== undefined){
         var name = $("<h4>").text(events[i]._embedded.attractions[0].name);
         name.attr("data-artist", events[i]._embedded.attractions[0].name);
+        var artist = $(this).attr("data-artist");
       }
 
       var dates = $("<p>").text(events[i].dates.start.localDate);
@@ -57,10 +58,10 @@ $(document).ready(function(){
         var price = $("<p>").text("price " + events[i].priceRanges[0].max);
       }
 
-      var SpotifyImage = $("<img>");
+      var SpotifyImage = $("<img class = 'spotify'>");
            SpotifyImage.attr("src", "assets/images/spotify.png");
 
-      var YouTubeImage = $("<img>");
+      var YouTubeImage = $("<img class ='youTube'>");
            YouTubeImage.attr("src", "assets/images/youtube.png");
               info.append(name, dates, price, SpotifyImage,YouTubeImage);
 
