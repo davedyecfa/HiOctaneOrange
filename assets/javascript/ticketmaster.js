@@ -57,7 +57,11 @@ $(document).ready(function(){
         var price = $("<p>").text("price " + events[i].priceRanges[0].max);
       }
 
+      $("#spotify").attr("src", "../images/spotify.png");
+
       info.append(name, dates, price);
+
+
 
           $("#name").append(info);
 
