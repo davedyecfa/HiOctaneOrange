@@ -57,18 +57,21 @@ $(document).ready(function(){
         var price = $("<p>").text("price " + events[i].priceRanges[0].max);
       }
 
-      $("#spotify").attr("src", "../images/spotify.png");
+      var SpotifyImage = $("<img>");
+           SpotifyImage.attr("src", "assets/images/spotify.png");
 
-      info.append(name, dates, price);
+      var YouTubeImage = $("<img>");
+           YouTubeImage.attr("src", "assets/images/youtube.png");
+              info.append(name, dates, price, SpotifyImage,YouTubeImage);
 
 
 
-          $("#name").append(info);
+                    $("#name").append(info);
 
-      item.show();
-      item.off("click");
-      item=item.next();
-    }
-  }
-  getEvents(page);
-});
+                    item.show();
+                    item.off("click");
+                    item=item.next();
+                  }
+                }
+                getEvents(page);
+              });
