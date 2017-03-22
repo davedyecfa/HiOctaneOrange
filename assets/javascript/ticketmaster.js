@@ -22,7 +22,7 @@ $(document).ready(function(){
 
       $.ajax({
         type:"GET",
-        url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=3d6mOOKQJKcLtzdmYGpP5rdw45kOwVKG&classificationName=music&keyword=" + city + "&size=20&page="+page,
+        url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=3d6mOOKQJKcLtzdmYGpP5rdw45kOwVKG&classificationName=music&keyword=" + city + "&size=10&page="+page,
         async:true,
         dataType: "json",
         success: function(json) {
@@ -43,31 +43,28 @@ $(document).ready(function(){
     var events = json._embedded.events;
     var item = items.first();
     for (var i=0;i<events.length;i++) {
+
+      var info = $("<div>" + "<br>");
+
       if (events[i]._embedded.attractions !== undefined){
-        item.children('.list-group-item-heading').text(events[i]._embedded.attractions[0].name);
+        var name = $("<h4>").text(events[i]._embedded.attractions[0].name);
+        name.attr("data-artist", events[i]._embedded.attractions[0].name);
       }
-      item.children('.list-group-item-text').text(events[i].dates.start.localDate);
+
+      var dates = $("<p>").text(events[i].dates.start.localDate);
+      
       if (events[i].priceRanges !== undefined){
-        $(".price").text("price " + events[i].priceRanges[0].min);
+        var price = $("<p>").text("price " + events[i].priceRanges[0].max);
       }
-      try {
-        item.children(".venue").text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
-      } catch (err) {
-        console.log(err);
-      }
+
+      info.append(name, dates, price);
+
+          $("#name").append(info);
+
       item.show();
       item.off("click");
       item=item.next();
     }
   }
-
-  $("#prev").click(function() {
-    getEvents(--page);
-  });
-
-  $("#next").click(function() {
-    getEvents(++page);
-  });
-
   getEvents(page);
 });
