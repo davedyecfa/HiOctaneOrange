@@ -49,7 +49,7 @@ $(document).ready(function(){
       if (events[i]._embedded.attractions !== undefined){
         var name = $("<h4>").text(events[i]._embedded.attractions[0].name);
         name.attr("data-artist", events[i]._embedded.attractions[0].name);
-        var artist = $(this).attr("data-artist");
+        
 
       }
 

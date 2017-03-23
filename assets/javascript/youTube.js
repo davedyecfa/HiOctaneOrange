@@ -1,7 +1,7 @@
 
 
 $(document).on("click",".youTube", function displayResults(event) {
-    console.log("hello");
+    var artist = $(this).attr("data-artist");
     console.log(artist);
 	var band = artist + " music vevo ";
 	$("#youTube-Here").empty();
