@@ -33,6 +33,7 @@
   // Event handler for user clicking the select-artist button
  $(document).on("click",".spotify-Here", function displayResults(event) {
     var artist = $(this).attr("data-artist");
+    console.log(artist);
     // Preventing the button from trying to submit the form
     event.preventDefault();
     // Storing the artist name
