@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="137682410780-vk7jkokspbesmn74e0p6f14c6bbqgn8c.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
@@ -77,7 +81,13 @@
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">search</i></a>
         <!--=============================================================================================================-->
         <!--===========================================ticketmaster Response Table=========================================-->
-
+ <div class="container buttons">
+    <div class="g-signin2 signedin" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <div class="signedinInfo"></div>
+    <img class = "signedInImage" src="">
+    <a  class ="signedout" href="" onclick="signOut();">Not you?</a>
+    </div>
+        
         <div class="container">
             <div class="row">
               <div class="col-xs-6">
@@ -100,15 +110,11 @@
 
 <div class="row">
     <div class="col m7"></div>
-    <div class="col m3" id="musixMatch-Here"> youtube Here</div>
+    <div class="col m3" id="youTube-Here"> youtube Here</div>
 </div>
 <div class="row">
     <div class="col m7"></div>
     <div class="col m3" id="spotify-Here"> Spotify Here</div>
-</div>
-<div class="row">
-    <div class="col m7"></div>
-    <div class="col m3" id="musixMatch-Here"> musixMatch Here</div>
 </div>
 </main>
 <!--============================================================================================================-->
@@ -133,7 +139,7 @@
 <script src="assets/javascript/ticketmaster.js"></script>
 <script src="assets/javascript/spotify.js"></script>
 <script src="assets/javascript/youTube.js"></script>
-
+<script src="assets/javascript/google.js"></script>
 <!--=====================================================================================================-->
 </body>
 </html>

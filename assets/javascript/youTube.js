@@ -4,7 +4,8 @@ $(document).on("click",".youTube", function displayResults(event) {
     console.log("hello");
     console.log(artist);
 	var band = artist + " music vevo ";
-	$(".video-here").empty();
+	$("#youTube-Here").empty();
+
 
 console.log(band);
 	event.preventDefault();
