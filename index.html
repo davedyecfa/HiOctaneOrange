@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="137682410780-vk7jkokspbesmn74e0p6f14c6bbqgn8c.apps.googleusercontent.com">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,64 +48,57 @@
                                         <div class="input-field col s12">
                                             <input placeholder="City" id="city" type="text" class="validate">
                                             <label for="city" class="active">
-                                                <h4>City</h4></label>
+                                                <h6>City</h6></label>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input placeholder="State" id="state" type="text" class="validate">
+                                                <label for="state" class="active">
+                                                    <h6>State</h6></label>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="State" id="state" type="text" class="validate">
-                                            <label for="state" class="active">
-                                                <h4>State</h4></label>
-                                        </div>
+                                    <div class="card-action">
+                                        <input type="submit" id="search-button" class="btn" value="Search">
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="Start Date" id="start-date" type="date" class="validate">
-                                            <label for="date" class="active">
-                                                <h4>Date</h4></label>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
-                            <div class="card-action">
-                                <input type="submit" id="search-button" class="btn" value="Search">
+                        </div>
+                    </div>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="medium material-icons">search</i></a>
+                <!--=============================================================================================================-->
+                <!--===========================================ticketmaster Response Table=========================================-->
+                <div class="container result">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div id='events-panel' class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Events</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="events" class="list-group">
+                                        <a href="#" class="list-group-item">
+                                            <div id="name"></div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">search</i></a>
-        <!--=============================================================================================================-->
-        <!--===========================================ticketmaster Response Table=========================================-->
-        <div class="container result">
-            <div class="row">
-                <div class="col-xs-6">
-                    <div id='events-panel' class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Events</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="events" class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <div id="name"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="container musicdivs">
+                    <!-- <div class="col m2"></div> -->
+                    <!-- <div class="row"> -->
+                    <!-- <div class="col m7"></div> -->
+                    <div id="youTube-Here"></div>
                 </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col m7"></div> -->
+                <div id="spotify-Here"></div>
             </div>
-        </div>
-        <div class="container musicdivs">
-            <!-- <div class="col m2"></div> -->
-            <!-- <div class="row"> -->
-            <!-- <div class="col m7"></div> -->
-            <div id="youTube-Here"></div>
-        </div>
-        <!-- <div class="row"> -->
-        <!-- <div class="col m7"></div> -->
-        <div id="spotify-Here"></div>
-        </div>
         </div>
     </main>
     <!--============================================================================================================-->

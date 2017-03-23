@@ -47,7 +47,7 @@ $(document).ready(function(){
       var info = $("<div>" + "<hr>");
 
       if (events[i]._embedded.attractions !== undefined){
-        var name = $("<h4>").text(events[i]._embedded.attractions[0].name);
+        var name = $("<h5>").text(events[i]._embedded.attractions[0].name);
       }
 
       var dates = $("<p>").text(events[i].dates.start.localDate);
