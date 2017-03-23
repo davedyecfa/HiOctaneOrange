@@ -44,7 +44,7 @@ $(document).ready(function(){
     var item = items.first();
     for (var i=0;i<events.length;i++) {
 
-      var info = $("<div>" + "<br>");
+      var info = $("<div>" + "<hr>");
 
       if (events[i]._embedded.attractions !== undefined){
         var name = $("<h4>").text(events[i]._embedded.attractions[0].name);

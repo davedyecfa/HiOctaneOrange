@@ -13,7 +13,7 @@ footer{
 }
 
 img{
-
+	float: right;
 	height:50px;
 	width:50px;
 }
@@ -24,8 +24,10 @@ img{
 }
 .musicdivs{
 	color:white;
-position: absolute;
-left: 30%;
-top:20%;
+	position: absolute;
+	left: 30%;
+	top:20%;
 
 }
+
+form, input{}

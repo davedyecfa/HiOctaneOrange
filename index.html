@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Concert Mob</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="137682410780-vk7jkokspbesmn74e0p6f14c6bbqgn8c.apps.googleusercontent.com">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </head>
 
@@ -34,35 +34,24 @@
                         <div class="card">
                             <div class="card-content">
                                 <span class="card-title black-text search">The Details</span>
+                                <br> <br> <br>
                                 <form>
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="City" id="city" type="text" class="validate">
-                                            <label for="city" class="active">City</label>
+                                            <label for="city" class="active"><h4>City</h4></label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="State" id="state" type="text" class="validate">
-                                            <label for="state" class="active">State</label>
+                                            <label for="state" class="active"><h4>State</h4></label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="Start Date" id="start-date" type="date" class="validate">
-                                            <label for="date" class="active">Start Date</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="End Date" id="end-date" type="date" class="validate">
-                                            <label for="date" class="active">End Date</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="Keyword" id="keyword" type="text" class="validate">
-                                            <label for="keyword" class="active">Keyword</label>
+                                            <label for="date" class="active"><h4>Date</h4></label>
                                         </div>
                                     </div>
                                 </form>
@@ -96,14 +85,14 @@
                 </div>
             </div>
         </div>
-    <div class = "buttons"> 
-    <div class="g-signin2 signedin" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <div class="signedinInfo"></div>
-    <img class = "signedInImage" src="">
-    <a  class ="signedout" href="" onclick="signOut();">Not you?</a>
-    </div>
+        <div class = "buttons"> 
+            <div class="g-signin2 signedin" data-onsuccess="onSignIn" data-theme="dark"></div>
+            <div class="signedinInfo"></div>
+            <img class = "signedInImage" src="">
+            <a  class ="signedout" href="" onclick="signOut();">Not you?</a>
+        </div>
         <div class="container musicdivs">
-        <div class="col m2"></div>
+            <div class="col m2"></div>
             <div class="row">
                 <div class="col m7"></div>
                 <div class="col m3" id="youTube-Here"> youtube Here</div>
@@ -126,16 +115,17 @@
         </div>
     </footer>
     <script>
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true
-    });
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true
+        });
     </script>
     <script src="assets/javascript/logic.js"></script>
     <script src="assets/javascript/ticketmaster.js"></script>
     <script src="assets/javascript/spotify.js"></script>
     <script src="assets/javascript/youTube.js"></script>
     <script src="assets/javascript/google.js"></script>
-    <!--=====================================================================================================-->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58d3ff0946b9417d"></script> 
+    
 </body>
 
 </html>
