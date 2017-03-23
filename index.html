@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 
 <body>
@@ -93,6 +94,12 @@
                 </div>
             </div>
         </div>
+    <div class = "buttons"> 
+    <div class="g-signin2 signedin" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <div class="signedinInfo"></div>
+    <img class = "signedInImage" src="">
+    <a  class ="signedout" href="" onclick="signOut();">Not you?</a>
+    </div>
         <div class="container musicdivs">
         <div class="col m2"></div>
             <div class="row">
