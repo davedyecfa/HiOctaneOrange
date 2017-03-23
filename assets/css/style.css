@@ -3,9 +3,8 @@
 }
 
 body{
-	background-image: url("../images/background4.jpg");
-	width: 100%;
-}
+	background: url("../images/background4.jpg") no-repeat top fixed;
+	background-size:100% 100%;
 
 img{
 	float: right;
@@ -18,11 +17,12 @@ img{
 	left: 90%;
 	top: 0%;
 }
-.music divs{
+.musicdivs{
 	color:white;
-	position: absolute;
-	left: 30%;
-	top:20%;
+	position: fixed;
+	float:left;
+	left: 70%;
+	top:0%;
 }
 
 footer{
@@ -32,5 +32,6 @@ footer{
 	padding-top: 25px;
 	text-align: center;
 	margin-top:44rem;
-	color:#fff
+	color:#fff;
+	bottom:0;
 }
