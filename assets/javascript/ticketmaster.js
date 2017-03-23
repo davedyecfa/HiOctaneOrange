@@ -53,7 +53,7 @@ $(document).ready(function() {
             var dates = $("<p>").text(events[i].dates.start.localDate);
 
             if (events[i].priceRanges !== undefined) {
-                var price = $("<p>").text("price: " + events[i].priceRanges[0].max);
+                var price = $("<p>").text("price: $" + events[i].priceRanges[0].max);
             }
 
             var venue = $("<p>").text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
