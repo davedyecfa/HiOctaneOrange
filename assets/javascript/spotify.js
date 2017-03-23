@@ -35,7 +35,7 @@
     var artist = $(this).attr("data-artist");
     console.log(artist);
     $("#youTube-Here").empty();
-    $("#spotify--Here").empty();
+    $("#spotify-Here").empty();
 
     // Preventing the button from trying to submit the form
     event.preventDefault();
