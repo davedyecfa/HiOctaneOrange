@@ -49,22 +49,22 @@ $(document).ready(function(){
       if (events[i]._embedded.attractions !== undefined){
         var name = $("<h4>").text(events[i]._embedded.attractions[0].name);
         name.attr("data-artist", events[i]._embedded.attractions[0].name);
-        
-
       }
 
       var dates = $("<p>").text(events[i].dates.start.localDate);
       
       if (events[i].priceRanges !== undefined){
-        var price = $("<p>").text("price " + events[i].priceRanges[0].max);
+        var price = $("<p>").text("price: " + events[i].priceRanges[0].max);
       }
+
+      var venue = $("<p>").text(events[i]._embedded.venues[0].name + " in " + events[i]._embedded.venues[0].city.name);
 
       var SpotifyImage = $("<img class = 'spotify'>");
            SpotifyImage.attr("src", "assets/images/spotify.png");
 
       var YouTubeImage = $("<img class ='youTube'>");
            YouTubeImage.attr("src", "assets/images/youtube.png");
-              info.append(name, dates, price, SpotifyImage,YouTubeImage);
+              info.append(name, dates, price, venue, SpotifyImage,YouTubeImage);
 
 
 
