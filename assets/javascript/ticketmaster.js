@@ -48,7 +48,6 @@ $(document).ready(function(){
 
       if (events[i]._embedded.attractions !== undefined){
         var name = $("<h4>").text(events[i]._embedded.attractions[0].name);
-        //name.attr("data-artist", events[i]._embedded.attractions[0].name);
       }
 
       var dates = $("<p>").text(events[i].dates.start.localDate);
@@ -61,6 +60,7 @@ $(document).ready(function(){
 
       var SpotifyImage = $("<img class = 'spotify'>");
            SpotifyImage.attr("src", "assets/images/spotify.png");
+            SpotifyImage.attr("data-artist", events[i]._embedded.attractions[0].name);
 
       var YouTubeImage = $("<img class ='youTube'>");
            YouTubeImage.attr("src", "assets/images/youtube.png");
