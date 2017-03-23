@@ -17,7 +17,6 @@
 <body>
     <main>
         <!--========================================Slide out Nav Bar=============================================-->
-
         <ul id="slide-out" class="side-nav">
             <li>
                 <div class="userView">
@@ -25,7 +24,6 @@
                     </div>
                 </div>
             </li>
-
             <div class="container">
                 <div class="row">
                     <div class="col s1 m10 offset-m1">
@@ -65,7 +63,6 @@
                                     </div>
                                 </form>
                             </div>
-
                             <div class="card-action">
                                 <input type="submit" id="search-button" class="btn" value="Search">
                             </div>
@@ -77,59 +74,57 @@
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">search</i></a>
         <!--=============================================================================================================-->
         <!--===========================================ticketmaster Response Table=========================================-->
-
         <div class="container">
             <div class="row">
-              <div class="col-xs-6">
-                <div id='events-panel' class="panel panel-primary">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Events</h3>
+                <div class="col-xs-6">
+                    <div id='events-panel' class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Events</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="events" class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div id="name"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <div id="events" class="list-group">
-                      <a href="#" class="list-group-item">
-                          <div id="name"></div>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<div class="row">
-    <div class="col m7"></div>
-    <div class="col m3" id="youTube-Here"> youtube Here</div>
-</div>
-<div class="row">
-    <div class="col m7"></div>
-    <div class="col m3" id="spotify-Here"> Spotify Here</div>
-</div>
-</main>
-<!--============================================================================================================-->
-<!--==========================================Footer=============================================================-->
-<footer>
-    <div class="card-panel black">
-        <div class="footer-copyright">
-            <div>
-                © 2017 Copyright HiOctaneOrange
             </div>
         </div>
-    </div>
-</footer>
-
-<script>
+        <div class="container musicdivs">
+        <div class="col m2"></div>
+            <div class="row">
+                <div class="col m7"></div>
+                <div class="col m3" id="youTube-Here"> youtube Here</div>
+            </div>
+            <div class="row">
+                <div class="col m7"></div>
+                <div class="col m3" id="spotify-Here"> Spotify Here</div>
+            </div>
+        </div>
+    </main>
+    <!--============================================================================================================-->
+    <!--==========================================Footer=============================================================-->
+    <footer>
+        <div class="card-panel black">
+            <div class="footer-copyright">
+                <div>
+                    © 2017 Copyright HiOctaneOrange
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
     $('.carousel.carousel-slider').carousel({
         fullWidth: true
     });
-</script>
-
-<script src="assets/javascript/logic.js"></script>
-<script src="assets/javascript/ticketmaster.js"></script>
-<script src="assets/javascript/spotify.js"></script>
-<script src="assets/javascript/youTube.js"></script>
-
-<!--=====================================================================================================-->
+    </script>
+    <script src="assets/javascript/logic.js"></script>
+    <script src="assets/javascript/ticketmaster.js"></script>
+    <script src="assets/javascript/spotify.js"></script>
+    <script src="assets/javascript/youTube.js"></script>
+    <!--=====================================================================================================-->
 </body>
+
 </html>
