@@ -43,5 +43,19 @@
       
       });
     });
-  })
- 
+  });
+
+  // Event handler for user clicking the select-artist button
+ $(document).on("click",".spotify", function displayResults(event) {
+    var artist = $(this).attr("data-artist");
+    console.log(artist);
+    $("#youTube-Here").empty();
+    $("#spotify-Here").empty();
+
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    // Running the getArtistTrack (passing in the artist as an argument)
+    getArtistTrack(artist);
+  });
+

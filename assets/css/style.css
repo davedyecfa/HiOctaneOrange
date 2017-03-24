@@ -3,11 +3,71 @@
 }
 
 body{
-	background-image: url("../images/background4.jpg");
-	width: 90%;
+	background: url("../images/background4.jpg") no-repeat top fixed;
+	background-size:100% 100%;
 }
+
+.buttons {
+	float: right;
+	width:20%;
+	color:white;
+	margin-top: 5%;
+	margin-right:5%;
+
+}
+
+img{
+	height:50px;
+	width:50px;
+	position: relative;
+	margin-top: -10%;
+	float:right;
+}
+.musicdivs{
+	color:white;
+	position: fixed;
+	float:left;
+	left: 70%;
+	top:20%;
+}
+
+
 footer{
-	text-align: center;
-	margin-top:38rem;
-	color:#fff
+	bottom:clear ;
+	color:#fff;
+	background:black;
+	text-align:center;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	height:10%;
+	width: 100%;
+	padding-top: 10px;
+	z-index: 9999;
+	
 }
+
+@media screen and (max-width: 980px) {
+	.panel{
+		width: 425px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.panel{
+		width: 500px;
+	}
+	.col-xs-6{
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.panel{
+		width: 500px;
+	}
+	.col-xs-6{
+		margin-top: 25px;
+	}
+}
+

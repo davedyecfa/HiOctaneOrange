@@ -5,19 +5,28 @@
     <meta charset="UTF-8">
     <title>Concert Mob</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="137682410780-vk7jkokspbesmn74e0p6f14c6bbqgn8c.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
     <main>
+        <div class="buttons">
+            <div class="g-signin2 signedin" data-onsuccess="onSignIn" data-theme="dark"></div>
+            <div class="signedinInfo"></div>
+            <img class="signedInImage" src="">
+            <a class="signedout" href="" onclick="signOut();">Not you?</a>
+        </div>
         <!--========================================Slide out Nav Bar=============================================-->
-
         <ul id="slide-out" class="side-nav">
             <li>
                 <div class="userView">
@@ -25,117 +34,83 @@
                     </div>
                 </div>
             </li>
-
             <div class="container">
-                <div class="row">
+                <div>
                     <div class="col s1 m10 offset-m1">
                         <div class="card">
                             <div class="card-content">
                                 <span class="card-title black-text search">The Details</span>
+                                <br>
+                                <br>
+                                <br>
                                 <form>
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="City" id="city" type="text" class="validate">
-                                            <label for="city" class="active">City</label>
+                                            <label for="city" class="active">
+                                                <h6>City</h6></label>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input placeholder="State" id="state" type="text" class="validate">
+                                                <label for="state" class="active">
+                                                    <h6>State</h6></label>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="State" id="state" type="text" class="validate">
-                                            <label for="state" class="active">State</label>
-                                        </div>
+                                    <div class="card-action">
+                                        <input type="submit" id="search-button" class="btn" value="Search">
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="Start Date" id="start-date" type="date" class="validate">
-                                            <label for="date" class="active">Start Date</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="End Date" id="end-date" type="date" class="validate">
-                                            <label for="date" class="active">End Date</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="Keyword" id="keyword" type="text" class="validate">
-                                            <label for="keyword" class="active">Keyword</label>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
-
-                            <div class="card-action">
-                                <input type="submit" id="search-button" class="btn" value="Search">
+                        </div>
+                    </div>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="medium material-icons">search</i></a>
+                <!--=============================================================================================================-->
+                <!--===========================================ticketmaster Response Table=========================================-->
+                <div class="container result">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div id='events-panel' class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Events</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="events" class="list-group">
+                                        <a href="" class="list-group-item">
+                                            <div id="name"></div>
+                                            <div id="images"></div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">search</i></a>
-        <!--=============================================================================================================-->
-        <!--===========================================ticketmaster Response Table=========================================-->
+                <div class="container musicdivs">
 
-        <div class="container">
-            <div class="row">
-              <div class="col-xs-6">
-                <div id='events-panel' class="panel panel-primary">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Events</h3>
-                </div>
-                <div class="panel-body">
-                    <div id="events" class="list-group">
-                      <a href="#" class="list-group-item">
-                          <h4 id="name"></h4>
-                          <p id="date"></p>
-                          <p id="venue"></p>
-                          <p id="price"></p>
-                          <img id= "spotify">
-                          <img id ="youtube">
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+                    <div id="youTube-Here"></div>
 
-
-<div class="row">
-    <div class="col m7"></div>
-    <div class="col m3" id="musixMatch-Here"> youtube Here</div>
-</div>
-<div class="row">
-    <div class="col m7"></div>
-    <div class="col m3" id="spotify-Here"> Spotify Here</div>
-</div>
-<div class="row">
-    <div class="col m7"></div>
-    <div class="col m3" id="musixMatch-Here"> musixMatch Here</div>
-</div>
-</main>
-<!--============================================================================================================-->
-<!--==========================================Footer=============================================================-->
-<footer>
-    <div class="card-panel black">
-        <div class="footer-copyright">
-            <div>
-                © 2017 Copyright HiOctaneOrange
+                <div id="spotify-Here"></div>
             </div>
         </div>
-    </div>
-</footer>
-
-<script>
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true
-    });
-</script>
-
-<script src="assets/javascript/logic.js"></script>
-<script src="assets/javascript/ticketmaster.js"></script>
-<!--=====================================================================================================-->
+    </main>
+    <!--============================================================================================================-->
+    <!--==========================================Footer=============================================================-->
+    <footer>
+        <div>
+            © 2017 Copyright HiOctaneOrange
+        </div>
+    </footer>
+    <script src="assets/javascript/logic.js"></script>
+    <script src="assets/javascript/ticketmaster.js"></script>
+    <script src="assets/javascript/spotify.js"></script>
+    <script src="assets/javascript/youTube.js"></script>
+    <script src="assets/javascript/google.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58d3ff0946b9417d"></script>
 </body>
+
 </html>
